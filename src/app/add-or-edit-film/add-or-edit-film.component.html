@@ -1,0 +1,33 @@
+<div class="container">
+    <form *ngIf="isShown"   class="forms_add_film" [formGroup]="AddfilmForm" >
+        <div class="form_add form_title">
+            <input placeholder="Title" id="title_film" type="text" formControlName="title" required>    
+        </div>
+        
+        <div class="form_add form_desc">
+            <input placeholder="Description" maxlength="200" id=" desc_film" type="text" formControlName="desc" required>
+        </div>
+
+        <div class="form_add form_image">
+            <input placeholder="URL image" id=" image_film" type="text" formControlName="image">
+        </div>
+
+        <div class="form_add form_video">
+            <input formControlName="video" type="text" id="upload" placeholder="URL" formControlName="video"/>
+        </div>
+        
+        <div class="form_add form_rate">
+            <input placeholder="Rating" class="rating" id=" rate_film" type="text" min="0" max="20" formControlName="rate" required>
+        </div>
+
+        <div class="button_submit">
+            <button (click)="addMovies()"  id="btn"type="submit">Add Movies</button>
+          </div>
+
+          <div class="button_submit update">
+            <button id="btn"type="submit">Update Movies</button>
+          </div>
+      </form>
+
+      
+</div>

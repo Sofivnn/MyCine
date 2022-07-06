@@ -1,0 +1,42 @@
+.container{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+    .tv-content{
+        display: flex;
+        flex-direction: column;
+        .video_player{
+            iframe{
+                width: 80rem;
+                height: 35rem;
+            }
+        }
+    }
+    .video_data{
+        background-color: #1d2026;
+        width: 80rem;
+        padding: 2rem 2rem;
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            color: white;
+            font-size: 1.1rem;
+        }
+        h3{
+            text-align: center;
+            color: white;
+            font-size: 1.1rem;
+            width: 75px;
+            border-radius: 2rem;
+            background:#ea4c88 ;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 0px 0px 20px 0px #ff00aa;
+                transition: 0.5s all;
+            }
+        }
+    }
+}

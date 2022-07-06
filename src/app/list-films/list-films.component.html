@@ -1,0 +1,28 @@
+
+<div class="container">
+  <app-add-or-edit-film></app-add-or-edit-film>
+  <div class="row">
+    <div *ngFor="let film of movies let index= index" class="card-list card">
+      <div   [ngStyle]="{'background-image': 'url(' + film.image + ')'}" class="wrapper">
+        <div class="header">
+          <ul class="menu-content">
+            <li><a (click)="delMovies(film, index)" role="link" aria-disabled="true" class="fa fa-trash"></a></li>
+            <li><a  class="fa fa-gratipay"></a></li>
+            <li><a (click)="editMovie(film)" role="link" aria-disabled="true" class="fa fa-pencil-square"></a></li>
+
+          </ul>
+        </div>
+        <div class="data">
+          <div class="content">
+            <h1 class="title"><a href="#">{{film.title}}</a></h1>
+            <p class="text">{{film.desc}}</p>
+            <a  routerLink="/film/{{film.id}}"  class="button">Explorer</a>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> 
